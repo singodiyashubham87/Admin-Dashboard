@@ -27,8 +27,8 @@ function App() {
 
   return (
     <>
-      <div className="parentContainer min-h-[100vh] w-[100vw] bg-[#434242] p-[2rem] font-primary flex flex-col gap-8">
-        <div className="searchBarAndDelete flex justify-between items-center w-[90%] lg:w-[70%] m-auto pl-[4rem] pr-[5.5rem]">
+      <div className="parentContainer min-h-[100vh] w-[100vw] bg-[#434242] p-[2rem] pt-[4rem] font-primary flex flex-col items-center gap-8">
+        <div className="searchBarAndDelete flex justify-between items-center w-[90%] lg:w-[70%]  pl-[4rem] pr-[5.5rem]">
           <input
             type="text"
             name=""
@@ -41,11 +41,12 @@ function App() {
           </div>
         </div>
 
-        <div className="mainContent flex flex-col gap-4 w-[90%] lg:w-[70%] m-auto">
+        <div className="mainContent flex flex-col gap-4 w-[90%] lg:w-[70%] ">
           <div className="fields flex items-center text-gray-400 font-bold p-[0.2rem]">
             <input
               type="radio"
               className="w-[10%] h-[1rem] rounded-[0.2rem] "
+              disabled
             />
             <h1 className="w-[25%] text-[1.2rem] text-center">Name</h1>
             <h1 className="w-[35%] text-[1.2rem] text-center">Email</h1>
@@ -58,10 +59,12 @@ function App() {
               return (
                 <>
                   <div key={index} className="field w-[100%] flex items-center text-gray-400 p-[0.3rem]">
+                    <div className="w-[10%] text-center">
                     <input
                       type="radio"
-                      className="w-[10%] h-[1rem] rounded-[0.2rem] "
+                      className="h-[1rem] rounded-[0.2rem] cursor-pointer"
                     />
+                    </div>
                     <h1 className="w-[25%]  text-center">{ele.name}</h1>
                     <h1 className="w-[35%]  text-center">{ele.email}</h1>
                     <h1 className="w-[15%]  text-center">{(ele.role)}</h1>
